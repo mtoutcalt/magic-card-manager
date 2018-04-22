@@ -1,0 +1,54 @@
+<div class="container">
+  <h3>Deck Creation Form</h3>
+
+  <!-- if deck is already there then display its data -->
+  <div *ngIf="localDeck; else deckFormTemplate">
+    <h3>Deck already created</h3>
+    <p>Deck Name: {{deckName}}</p>
+    <p>User Name: {{userName}}</p>
+    <p>First Name: {{firstName}}</p>
+    <p>Last Name: {{lastName}}</p>
+
+    <button class="btn btn-dark" (click)="resetDeck()"> Reset Deck </button>
+  </div>
+
+  <ng-template #deckFormTemplate>
+    <form class="formwidth" (ngSubmit)="onSubmit()" >
+
+      <table class="fullwidth" cellspacing="0">
+        <tr>
+          <td>
+            <mat-input-container class="fullwidth">
+              <!--using autofocus which is a cool html5 attribute  -->
+              <input matInput autofocus="true" placeholder="Username" id="username" [(ngModel)]="deck.username" name="username">
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container class="fullwidth">
+              <input matInput placeholder="First Name" id="firstname" [(ngModel)]="deck.firstname" name="firstname">
+            </mat-input-container>
+          </td>
+          <td>
+            <mat-input-container class="fullwidth">
+              <input matInput placeholder="Last Name" id="lastname" [(ngModel)]="deck.lastname" name="lastname">
+            </mat-input-container>
+          </td>
+        </tr>
+      </table>
+
+      <p>
+        <!--using spellcheck which is a cool html5 attribute  -->
+        <mat-input-container class="fullwidth">
+          <textarea spellcheck="true" matInput placeholder="deckName" id="deckName" [(ngModel)]="deck.deckName" name="deckName"></textarea>
+        </mat-input-container>
+      </p>
+
+      <p>
+        <button type="submit" mat-raised-button>Submit</button>
+      </p>
+    </form>
+  </ng-template>
+
+  <div id="snackbar">Added Card to Deck!</div>
+
+</div>

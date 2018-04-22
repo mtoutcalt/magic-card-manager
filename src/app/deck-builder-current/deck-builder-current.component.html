@@ -1,0 +1,57 @@
+<div class="container">
+<h3>
+  Your Deck
+</h3>
+
+<div *ngIf="storedColor; else pickColor">
+    <h4>Creatures</h4>
+      <table class="table table-dark">
+        <tr>
+          <th>Name</th>
+          <th>Card</th>
+          <th>Text</th>
+          <th>Type</th>
+          <th>Rarity</th>
+          <th>Set</th>
+        </tr>
+        <tr *ngFor="let card of creatureCards">
+          <td><button class="btn btn-primary" (click)="creatureCardDeletion(card)" >Delete from Deck</button></td>
+          <td>{{card.name}}</td>
+          <td><img src="{{card.imageUrl}}" /></td>
+          <td>{{card.text}}</td>
+          <td>{{card.type}}</td>
+          <td>{{card.rarity}}</td>
+          <td>{{card.set}}</td>
+        </tr>
+      </table>
+
+      <h4>Spells</h4>
+        <table class="table table-dark">
+          <tr>
+            <th>Name</th>
+            <th>Card</th>
+            <th>Text</th>
+            <th>Type</th>
+            <th>Rarity</th>
+            <th>Set</th>
+          </tr>
+          <tr *ngFor="let card of spellCards">
+            <td><button class="btn btn-primary" (click)="spellCardDeletion(card)" >Delete from Deck</button></td>
+            <td>{{card.name}}</td>
+            <td><img src="{{card.imageUrl}}" /></td>
+            <td>{{card.text}}</td>
+            <td>{{card.type}}</td>
+            <td>{{card.rarity}}</td>
+            <td>{{card.set}}</td>
+          </tr>
+        </table>
+
+        <div id="snackbar">Deleted Card From Deck</div>
+  </div>
+
+  <ng-template #pickColor>
+    <br>
+    <h3>Please Choose a Color</h3>
+  </ng-template>
+
+</div>

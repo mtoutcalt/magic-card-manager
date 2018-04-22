@@ -1,0 +1,36 @@
+<br />
+<div class="container">
+
+  <h3>Open up a Booster Pack</h3>
+
+  <button type="submit" value="OPEN" class="btn btn-success" (click)="openBooster()">
+      <p> What's Inside?</p>
+      <img src="../../assets/booster.jpg" /> <!--https://www.themarysue.com/alpha-booster-box-magic-the-gathering/-->
+  </button>
+  <br /><br />
+
+  <div *ngIf="setName">
+    <h1>Set Name: {{setName}}</h1>
+    <table class="table table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Card</th>
+        <th>Text</th>
+        <th>Type</th>
+        <th>Rarity</th>
+        <th>Set</th>
+        <th>ID</th>
+      </tr>
+      <tr *ngFor="let card of booster">
+        <td>{{card.name}}</td>
+        <td><img src="{{card.imageUrl}}" /></td>
+        <td>{{card.text}}</td>
+        <td>{{card.type}}</td>
+        <td>{{card.rarity}}</td>
+        <td>{{card.set}}</td>
+        <td>{{card.id}}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>

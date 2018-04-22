@@ -1,0 +1,37 @@
+<div class="container">
+  <h3>
+    Choose your color:
+  </h3>
+
+  <div id="noDeck">
+    <h3>Please create a Deck before choosing a Color</h3>
+  </div>
+
+  <div id="chosen"></div>
+
+
+<!-- Driving 5 circles in a pentagon-like pattern which represents the colors of Magic -->
+  <div id="colorWheel">
+    <svg  height="1000" width="800">
+      <g id="whiteChosen">
+        <circle cx="200" cy="50" r="25" stroke="black" stroke-width="3" fill="cornsilk" onClick="colorChosen(event)"/>
+      </g>
+      <g id="blueChosen">
+        <circle cx="275" cy="100" r="25" stroke="black" stroke-width="3" fill="cornflowerblue" />
+      </g>
+      <g id="greenChosen">
+        <circle cx="125" cy="100" r="25" stroke="black" stroke-width="3" fill="forestgreen" />
+      </g>
+      <g id="redChosen">
+        <circle cx="155" cy="175" r="25" stroke="black" stroke-width="3" fill="firebrick" />
+      </g>
+      <g id="blackChosen">
+        <circle cx="246" cy="175" r="25" stroke="darkslategrey" stroke-width="3" fill="black" />
+      </g>
+      Sorry, your browser does not support inline SVG.
+    </svg>
+  </div>
+
+    <div id="snackbar">You Chose the Deck Color!</div>
+
+</div>

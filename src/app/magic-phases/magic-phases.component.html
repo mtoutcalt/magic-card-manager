@@ -1,0 +1,27 @@
+<br />
+<div class="container">
+  <h2>How to Play Magic: The Gathering</h2>
+  <h5>Setup - Each player has their own deck and starts with a life total of 20.  Shuffle the deck and draw 7 cards.  The player who goes first
+      does not draw a card from their deck on the first turn.</h5>
+
+    <canvas #mycanvas id="testCanvas" width="1000" height="600" style="border:1px solid #000000; background: url('../assets/magicBackground.jpg')"></canvas>
+    <br>
+    <div class="container">
+      <button id="step1" type="button" class="btn btn-primary">Step 1</button>
+      <button id="step2" type="button" class="btn btn-primary">Step 2</button>
+      <button id="step3" type="button" class="btn btn-primary">Step 3</button>
+      <button id="step4" type="button" class="btn btn-primary">Step 4</button>
+      <button id="step5" type="button" class="btn btn-primary">Step 5</button>
+      <br><br>
+
+      <div>
+        <button id="play" type="button" class="btn btn-success">Play</button>
+        <button id="stop" type="button" class="btn btn-danger">Stop</button>
+        <audio id="audioplayer" controls autoplay="autoplay" loop="loop" volume="0.0" >
+          <source src="../assets/BurntSpirit.mp3" type="audio/mpeg">
+          <!-- royalty free from - https://incompetech.com/music/royalty-free/index.html?collection=033 -->
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+</div>

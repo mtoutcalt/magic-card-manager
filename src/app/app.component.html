@@ -1,0 +1,24 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar>
+  <img src="../assets/magicHeader.jpg" alt="Magic the Gathering" width="200" height="50" style="padding-right: 10px;">
+  <span>Magic the Gathering - Deck Manager</span>
+</mat-toolbar>
+ <nav>
+   <a routerLink="/" routerLinkActive="active" mat-raised-button color="primary">Home</a>
+   <a routerLink="/deckbuilder" routerLinkActive="active" mat-raised-button color="primary">Deck Builder</a>
+   <a routerLink="/booster" routerLinkActive="active" mat-raised-button color="primary">Open Booster Pack</a>
+   <a routerLink="/tutorial" routerLinkActive="active" mat-raised-button color="primary">Tutorial</a>
+   <a routerLink="/phases" routerLinkActive="active" mat-raised-button color="primary">Phases of Game</a>
+   <a routerLink="/formats" routerLinkActive="active" mat-raised-button color="primary">Formats of Game</a>
+   <a routerLink="/findstore" routerLinkActive="active" mat-raised-button color="primary">Find Where to Play</a>
+ </nav>
+ <router-outlet></router-outlet>
+
+<br><br><br>
+
+<div id="footer" class="text-center">
+  <footer>
+    <div>  CS701 - Mark Outcalt </div>
+    <div>  Magic: The Gathering is property of Wizards of the Coast LLC</div>
+  </footer>
+</div>

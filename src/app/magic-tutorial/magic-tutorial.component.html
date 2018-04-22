@@ -1,0 +1,42 @@
+<div class="container">
+  <br><br>
+
+  <!-- The other videos are embedded but I wanted a local video to try out the html5 controls -->
+  <!-- It will play when mouseover and it will display the file name and when its paused or playing on the page -->
+  <h4>Never Played Before? Learn How to Play Here</h4>
+  <video  (mouseover)="play()" (mouseout)="pause()" id="localvideo" width="800" controls poster="../assets/how-to-play-magic.jpg"> <!-- poster image from http://www.themagicrain.com/2017/06/magic-the-gathering-let-there-be-war/ -->
+    <source src="../assets/howtoplay.mp4" type="video/mp4">  <!--video owned by wizards of the coast llc - https://www.youtube.com/watch?v=RZyXU1L3JXk&t=2s  -->
+    Your browser does not support HTML5 video.
+  </video>
+  <div id="status"></div>
+
+  <hr>
+  <h4>Other Interesting Videos</h4>
+  <br>
+
+  <h5>Old but Still Good Tutorial - Part One</h5>
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/ktZNqMxfywI?ecver=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+
+  <h5>Old but Still Good Tutorial - Part One</h5>
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/KufWLkPxrKc?ecver=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+
+  <h5>Old but Still Good Tutorial - Part One</h5>
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/YUtGCeSoYi4?ecver=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+
+  <h5>Ways to Play</h5>
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/9UccjGQJ1lM?ecver=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+
+  <h5>How to Build Your First Deck</h5>
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/ncGvTC-Uun0?ecver=1"
+    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+  </iframe>
+
+</div>

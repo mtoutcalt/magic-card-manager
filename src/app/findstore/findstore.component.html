@@ -1,0 +1,32 @@
+<div class="container">
+
+    <br /><br />
+
+    <h3>Find Directions to your closest Gaming Store</h3>
+    <br />
+
+    <div *ngIf="!destination; else locationInput">
+      <h1>Loading! - Finding your closest Gaming store where you can buy and play Magic!</h1>
+    </div>
+
+    <ng-template #locationInput>
+      <div class="form-inline">
+        <div class="form-group mb-2">
+         <label for="loc">Find the closest store to location:</label>
+        </div>
+        <div class="form-group mx-sm-3 mb-2">
+         <input type="text" id="loc" name="loc" #locInput placeholder="city, state" class="form-control">
+       </div>
+       <div class="form-group mb-2">
+         <button class="btn btn-primary form-control" (click)="getClosestGamingStoreToInputCityAndState(locInput.value)">Find</button>
+       </div>
+      </div>
+       <br />
+    </ng-template>
+
+     <div style="width: 800px;">
+       <div id="map" style="width: 380px; height: 400px; float: left;"></div>
+       <div id="panel" style="width: 400px; float: right;"></div>
+     </div>
+
+</div>

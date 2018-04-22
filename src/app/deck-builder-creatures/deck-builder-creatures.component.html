@@ -1,0 +1,32 @@
+<div *ngIf="storedColor; else pickColor">
+  <h3>CREATURES!!!!</h3>
+
+  <table class="table table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Card</th>
+      <th>Text</th>
+      <th>Type</th>
+      <th>Rarity</th>
+      <th>Set</th>
+      <th>ID</th>
+    </tr>
+    <tr *ngFor="let card of creatureCards">
+      <td><button class="btn btn-primary" (click)="cardChosen(card)" >Add to Deck</button></td>
+      <td>{{card.name}}</td>
+      <td><img src="{{card.imageUrl}}" /></td>
+      <td>{{card.text}}</td>
+      <td>{{card.type}}</td>
+      <td>{{card.rarity}}</td>
+      <td>{{card.set}}</td>
+      <td>{{card.id}}</td>
+    </tr>
+  </table>
+
+<div id="snackbar">Added Card to Deck!</div>
+</div>
+
+<ng-template #pickColor>
+  <br>
+  <h3>Please Choose a Color first before choosing Creatures</h3>
+</ng-template>
